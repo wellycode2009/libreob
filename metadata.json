@@ -1,0 +1,8 @@
+{
+  "uuid": "libreob@local",
+  "name": "libreob",
+  "description": "A sticky-note pinboard in the top panel. Write notes, pin images and files on a clothesline. Inspired by Tendedero.",
+  "shell-version": ["51"],
+  "version": 1,
+  "url": "https://github.com/YOUR-USERNAME/libreob"
+}

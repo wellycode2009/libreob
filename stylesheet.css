@@ -1,0 +1,83 @@
+.libreob-board {
+    spacing: 8px;
+    padding: 8px 10px 10px 10px;
+}
+.libreob-header { spacing: 6px; }
+.libreob-title { font-weight: 800; font-size: 125%; padding-left: 4px; }
+
+.libreob-btn {
+    border-radius: 99px;
+    padding: 4px 12px;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+.libreob-btn:hover, .libreob-btn:focus { background-color: rgba(255, 255, 255, 0.22); }
+.libreob-btn:active { background-color: rgba(255, 255, 255, 0.32); }
+.libreob-btn-box { spacing: 6px; }
+
+.libreob-scroll { width: 620px; height: 470px; }
+.libreob-rows { padding-bottom: 6px; }
+.libreob-empty { padding: 60px 40px; color: rgba(255, 255, 255, 0.6); text-align: center; }
+
+/* the clothesline */
+.libreob-row {
+    border-top: 2px solid rgba(255, 255, 255, 0.30);
+    margin-top: 14px;
+}
+.libreob-slot { padding: 0 6px 8px 6px; }
+.libreob-pin {
+    width: 9px;
+    height: 20px;
+    background-color: #c8975a;
+    border: 1px solid #8a6234;
+    border-top-width: 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.libreob-card {
+    width: 188px;
+    height: 196px;
+    padding: 4px 8px 8px 8px;
+    border-radius: 3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    color: #2b2b2b;
+    spacing: 2px;
+}
+.libreob-card-head { height: 24px; spacing: 2px; }
+.libreob-dot {
+    width: 14px;
+    height: 14px;
+    margin: 5px 0;
+    border-radius: 99px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+}
+.libreob-dot:hover, .libreob-dot:focus { border-color: rgba(0, 0, 0, 0.8); }
+.libreob-iconbtn {
+    width: 22px;
+    height: 22px;
+    border-radius: 99px;
+    color: rgba(0, 0, 0, 0.55);
+}
+.libreob-iconbtn:hover, .libreob-iconbtn:focus {
+    background-color: rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+StEntry.libreob-note, StEntry.libreob-note:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-height: 0;
+    color: #2b2b2b;
+    caret-color: #2b2b2b;
+    selection-background-color: rgba(0, 0, 0, 0.2);
+    selected-color: #111111;
+    font-size: 11pt;
+}
+StEntry.libreob-note StLabel.hint-text { color: rgba(0, 0, 0, 0.4); }
+
+.libreob-media { border-radius: 2px; }
+.libreob-media:hover, .libreob-media:focus { background-color: rgba(0, 0, 0, 0.07); }
+.libreob-caption { font-size: 85%; color: rgba(0, 0, 0, 0.65); text-align: center; }
+.libreob-filename { font-weight: bold; font-size: 95%; text-align: center; }
+.libreob-filemeta { font-size: 85%; color: rgba(0, 0, 0, 0.6); text-align: center; }
