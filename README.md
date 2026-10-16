@@ -1,18 +1,24 @@
-# libreob
+libreob
 
-A sticky-note pinboard in the GNOME top panel (GNOME Shell 51).
-The clothesline layout comes from [Tendedero](https://github.com/alejandrobujan/tendedero).
+A sticky-note pinboard in the GNOME top panel (GNOME Shell 51). Write notes, pin images and files on a clothesline.
 
-- **Note**: new sticky note. Type directly on it; it saves as you type.
-- **Image / file**: opens a file picker; the chosen files are copied onto the board.
-- **Paste** (or Ctrl+V): pastes a copied image (e.g. a screenshot), copied files, or text (becomes a note).
-- Card buttons: coloured dot cycles the colour, copy, open (images/files), close removes it.
+Install
+sh
+unzip libreob@local.zip -d ~/.local/share/gnome-shell/extensions/libreob@local
+gnome-extensions enable libreob@local
 
-Data: `~/.local/share/libreob/` (`board.json` plus `files/`).
+Log out and back in the first time (Wayland).
 
-## Install
-    cp -r libreob@local ~/.local/share/gnome-shell/extensions/
-    gnome-extensions enable libreob@local
-Log out and back in the first time (Wayland can't reload the shell).
+Use
+Note: new sticky note, saved as you type. Click the dot to change its colour.
+Image / file: pick files to pin them.
+Paste (Ctrl+V): pins a copied image, files, or text (as a note).
 
-Test without logging out: `dbus-run-session -- gnome-shell --devkit`
+Data is stored in ~/.local/share/libreob/.
+
+Credits
+
+The clothesline idea comes from Tendedero by Alejandro Buján. No code, name or artwork was reused.
+
+License
+public domain
