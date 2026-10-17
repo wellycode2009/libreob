@@ -1,47 +1,69 @@
-.libreob-board {
-    spacing: 8px;
-    padding: 8px 10px 10px 10px;
-}
+/* Fonts: Thickhead (display) and Northampton (handwriting) are bundled in fonts/
+   and installed to ~/.local/share/fonts/libreob on first enable. */
+
+.libreob-board { spacing: 6px; padding: 8px 10px 10px 10px; }
 .libreob-header { spacing: 6px; }
-.libreob-title { font-weight: 800; font-size: 125%; padding-left: 4px; }
+.libreob-title { font-family: "Thickhead", "Cantarell", sans-serif; font-weight: normal; font-size: 22pt; padding-left: 4px; }
 
 .libreob-btn {
     border-radius: 99px;
-    padding: 4px 12px;
+    padding: 6px 14px;
     background-color: rgba(255, 255, 255, 0.10);
+    font-family: "Thickhead", "Cantarell", sans-serif;
+    font-weight: normal;
 }
 .libreob-btn:hover, .libreob-btn:focus { background-color: rgba(255, 255, 255, 0.22); }
 .libreob-btn:active { background-color: rgba(255, 255, 255, 0.32); }
 .libreob-btn-box { spacing: 6px; }
 
-.libreob-scroll { width: 620px; height: 470px; }
-.libreob-rows { padding-bottom: 6px; }
-.libreob-empty { padding: 60px 40px; color: rgba(255, 255, 255, 0.6); text-align: center; }
-
-/* the clothesline */
-.libreob-row {
-    border-top: 2px solid rgba(255, 255, 255, 0.30);
-    margin-top: 14px;
+.libreob-rope { height: 44px; }
+.libreob-scroll { width: 620px; height: 276px; }
+.libreob-line { padding: 0 6px; }
+.libreob-empty {
+    width: 600px;
+    padding: 50px 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Northampton", "Cantarell", sans-serif;
+    font-size: 15pt;
 }
-.libreob-slot { padding: 0 6px 8px 6px; }
+
+.libreob-nav {
+    width: 34px;
+    height: 34px;
+    border-radius: 99px;
+    margin-top: 125px;
+    background-color: rgba(0, 0, 0, 0.62);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.libreob-nav:hover, .libreob-nav:focus { background-color: rgba(0, 0, 0, 0.85); }
+
+.libreob-slot { width: 188px; padding: 0 6px 26px 6px; }
+
+/* aluminium clip */
 .libreob-pin {
     width: 9px;
-    height: 20px;
-    background-color: #c8975a;
-    border: 1px solid #8a6234;
-    border-top-width: 0;
+    height: 26px;
     border-radius: 0 0 4px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-top-width: 0;
+    background-gradient-direction: horizontal;
+    background-gradient-start: #a9a9a9;
+    background-gradient-end: #ececec;
+    box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .libreob-card {
     width: 188px;
-    height: 196px;
-    padding: 4px 8px 8px 8px;
+    height: 206px;
+    max-height: 206px;
     border-radius: 3px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
     color: #2b2b2b;
-    spacing: 2px;
 }
+.libreob-card:hover { box-shadow: 0 9px 15px rgba(0, 0, 0, 0.5); }
+.libreob-content { padding: 14px 8px 8px 8px; spacing: 2px; }
 .libreob-card-head { height: 24px; spacing: 2px; }
 .libreob-dot {
     width: 14px;
@@ -55,11 +77,19 @@
     width: 22px;
     height: 22px;
     border-radius: 99px;
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.6);
 }
-.libreob-iconbtn:hover, .libreob-iconbtn:focus {
-    background-color: rgba(0, 0, 0, 0.12);
-    color: rgba(0, 0, 0, 0.9);
+.libreob-iconbtn:hover, .libreob-iconbtn:focus { background-color: rgba(0, 0, 0, 0.14); color: black; }
+
+.libreob-copied {
+    padding: 4px 10px;
+    border-radius: 99px;
+    background-color: #18191c;
+    color: white;
+    font-family: "Thickhead", "Cantarell", sans-serif;
+    font-weight: normal;
+    font-size: 10pt;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 StEntry.libreob-note, StEntry.libreob-note:focus {
@@ -72,12 +102,13 @@ StEntry.libreob-note, StEntry.libreob-note:focus {
     caret-color: #2b2b2b;
     selection-background-color: rgba(0, 0, 0, 0.2);
     selected-color: #111111;
-    font-size: 11pt;
+    font-family: "Northampton", "Cantarell", sans-serif;
+    font-size: 15pt;
 }
 StEntry.libreob-note StLabel.hint-text { color: rgba(0, 0, 0, 0.4); }
 
 .libreob-media { border-radius: 2px; }
 .libreob-media:hover, .libreob-media:focus { background-color: rgba(0, 0, 0, 0.07); }
-.libreob-caption { font-size: 85%; color: rgba(0, 0, 0, 0.65); text-align: center; }
-.libreob-filename { font-weight: bold; font-size: 95%; text-align: center; }
-.libreob-filemeta { font-size: 85%; color: rgba(0, 0, 0, 0.6); text-align: center; }
+.libreob-caption { font-family: "Northampton", "Cantarell", sans-serif; font-size: 12pt; color: rgba(0, 0, 0, 0.65); text-align: center; }
+.libreob-filename { font-family: "Thickhead", "Cantarell", sans-serif; font-weight: normal; font-size: 13pt; text-align: center; }
+.libreob-filemeta { font-family: "Northampton", "Cantarell", sans-serif; font-size: 12pt; color: rgba(0, 0, 0, 0.6); text-align: center; }
