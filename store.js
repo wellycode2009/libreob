@@ -13,6 +13,10 @@ export const COLORS = [
 
 const IMAGE_EXT = {png: 'png', jpeg: 'jpg', webp: 'webp', gif: 'gif', bmp: 'bmp'};
 
+function randomTilt() {
+    return +(Math.random() * 5 - 2.5).toFixed(2); // every card hangs a little crooked
+}
+
 function newId() {
     return Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
 }
@@ -60,6 +64,10 @@ export class Store {
             const data = JSON.parse(new TextDecoder().decode(bytes));
             if (Array.isArray(data.items))
                 this.items = data.items;
+            for (const item of this.items) {
+                if (item.tilt === undefined)
+                    item.tilt = randomTilt();
+            }
         } catch (_e) {
             // first run, or unreadable file: start with an empty board
         }
@@ -99,6 +107,7 @@ export class Store {
             text,
             color: COLORS[this.items.length % 6],
             created: Date.now(),
+            tilt: randomTilt(),
         };
         this.items.unshift(item);
         this.save();
@@ -123,6 +132,7 @@ export class Store {
             size: data.length,
             color: '#ffffff',
             created: Date.now(),
+            tilt: randomTilt(),
         };
         this.items.unshift(item);
         this.save();
@@ -169,6 +179,7 @@ export class Store {
                     size: info.get_size(),
                     color: isImage ? '#ffffff' : COLORS[2],
                     created: Date.now(),
+            tilt: randomTilt(),
                 };
                 this.items.unshift(item);
                 this.save();
