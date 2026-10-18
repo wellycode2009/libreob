@@ -1,5 +1,5 @@
 [README.md](https://github.com/user-attachments/files/33596211/README.md)
-# libreob
+# librip
 
 A sticky-note pinboard in the GNOME top panel (GNOME Shell 51). Write notes, pin images and files on a clothesline that scrolls sideways.
 
